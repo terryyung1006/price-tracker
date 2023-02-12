@@ -99,7 +99,7 @@ func (as *APITestSuite) TestGetLatestPriceNoPriceTag() {
 	router.ServeHTTP(rec, req)
 
 	as.Equal(http.StatusBadRequest, rec.Code)
-	as.Equal("{\"message\":\"param pair_tag cannot be empty\"}", rec.Body.String())
+	as.Equal("{\"message\":\"only btcusd is supported now\"}", rec.Body.String())
 }
 
 // Test /api/price_by_timestamp
@@ -141,13 +141,13 @@ func (as *APITestSuite) TestGetPriceByTimestampFailIfNoRecord() {
 
 // Test /api/average_price_in_range
 func (as *APITestSuite) TestGetAveragePriceSuccessCase() {
-	repository.TmpPrice = map[string]map[int]float64{"btcusd": {1234567800: 1, 1234567860: 1.1, 1234567920: 1.2}}
+	repository.TmpPrice = map[string]map[int]float64{"btcusd": {1234567800: 1, 1234567860: 2, 1234567920: 3}}
 	repo.On("GetPriceInTimestampRange", "btcusd", 1234567800, 1234567920).Return([]bson.M{}, 200, nil)
 	req, _ := http.NewRequest("GET", "/api/average_price_in_range?pair_tag=btcusd&timestamp_from=1234567800&timestamp_to=1234567920", nil)
 	router.ServeHTTP(rec, req)
 
 	as.Equal(200, rec.Code)
-	as.Equal("{\"data\":1.0999999999999999}", rec.Body.String())
+	as.Equal("{\"data\":2}", rec.Body.String())
 }
 
 func (as *APITestSuite) TestGetAveragePriceSuccessCase2() {
