@@ -30,8 +30,8 @@ API document for price related open endpoints
 
 Open endpoints require no Authentication.
 
-* [LatestPrice](getLatestPrice.md) : `GET /api/last_price/`
+* [LatestPrice](getLatestPrice.md) : `GET localhost:8080/api/last_price/`
 
-* [PriceByTimestamp](getPriceByTimestamp.md) : `GET /api/price_by_timestamp/`
+* [PriceByTimestamp](getPriceByTimestamp.md) : `GET localhost:8080/api/price_by_timestamp/`
 
-* [AveragePrice](getAveragePriceInRange.md) : `GET /api/average_price_in_range/`
+* [AveragePrice](getAveragePriceInRange.md) : `GET localhost:8080/api/average_price_in_range/`

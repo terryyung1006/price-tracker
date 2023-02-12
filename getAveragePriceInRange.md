@@ -2,7 +2,7 @@
 
 Get average price in given timestamp range.
 
-**URL** : `/api/price_by_timestamp/`
+**URL** : `localhost:8080/api/price_by_timestamp/`
 
 **Method** : `GET`
 

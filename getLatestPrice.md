@@ -2,7 +2,7 @@
 
 Get latest price get by worker from Coingecko public api.
 
-**URL** : `/api/last_price/`
+**URL** : `localhost:8080/api/last_price/`
 
 **Method** : `GET`
 

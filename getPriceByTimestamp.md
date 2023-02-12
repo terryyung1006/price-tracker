@@ -2,7 +2,7 @@
 
 Get price at timestamp nearest to given value. Will get from Coingecko public API if no record in Database.
 
-**URL** : `/api/price_by_timestamp/`
+**URL** : `localhost:8080/api/price_by_timestamp/`
 
 **Method** : `GET`
 
