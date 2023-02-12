@@ -18,14 +18,10 @@ Get average price in given timestamp range.
 }
 ```
 
-**Data example**
+**Example**
 
-```json
-{
-    "pair_tag": "btcusd",
-    "timestamp_from": "1676179815",
-    "timestamp_to": "1676180295"
-}
+```bash
+    localhost:8080/api/average_price_in_range?timestamp_from=1676179815&timestamp_to=1676180295&pair_tag=btcusd
 ```
 
 ## Success Response

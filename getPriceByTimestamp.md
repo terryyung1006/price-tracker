@@ -17,13 +17,10 @@ Get price at timestamp nearest to given value. Will get from Coingecko public AP
 }
 ```
 
-**Data example**
+**Example**
 
-```json
-{
-    "pair_tag": "btcusd",
-    "timestamp": "1676179815",
-}
+```bash
+    localhost:8080/api/price_by_timestamp?timestamp=1676118169&pair_tag=btcusd
 ```
 
 ## Success Response

@@ -16,12 +16,10 @@ Get latest price get by worker from Coingecko public api.
 }
 ```
 
-**Data example**
+**Example**
 
-```json
-{
-    "pair_tag": "btcusd",
-}
+```bash
+    localhost:8080/api/last_price?pair_tag=btcusd
 ```
 
 ## Success Response
