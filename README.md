@@ -16,6 +16,7 @@ if running server without docker needed, please comment out price-tracker servic
 To run tests, run the following command in repo folder
 
 ```bash
+  go mod tidy
   go test ./test/api_test.go -v
 ```
 
@@ -25,7 +26,7 @@ To run tests, run the following command in repo folder
 Start the server
 
 ```bash
-  sudo docker-compose -f compose.yml up
+  docker-compose -f compose.yml up
 ```
 
 # RESTAPIDocs
