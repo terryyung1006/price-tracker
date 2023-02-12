@@ -31,7 +31,7 @@ Get price at timestamp nearest to given value. Will get from Coingecko public AP
 
 ```json
 {
-    "data": "21000"
+    "data": "21725.71830815818"
 }
 ```
 

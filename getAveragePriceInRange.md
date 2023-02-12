@@ -32,7 +32,7 @@ Get average price in given timestamp range.
 
 ```json
 {
-    "data": "21000"
+    "data": "22115.955"
 }
 ```
 

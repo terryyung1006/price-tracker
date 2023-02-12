@@ -30,7 +30,7 @@ Get latest price get by worker from Coingecko public api.
 
 ```json
 {
-    "data": "21000"
+    "data": "22040.572"
 }
 ```
 
