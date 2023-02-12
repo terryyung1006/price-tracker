@@ -18,6 +18,7 @@ import (
 func main() {
 	var mu sync.Mutex
 
+	//instantiate mongoDB client
 	mongoDBClient, err := utils.CreateMongoDBClient()
 	if err != nil {
 		log.Fatalln(err.Error())
@@ -25,12 +26,14 @@ func main() {
 	}
 	utils.MongoDBClientInstance = mongoDBClient
 
+	//instantiate API interface
 	pricePairRepository := repository.CreatePricePairMongoDBRepository(mongoDBClient)
 	pricePairService := service.CreatePricePairService(pricePairRepository)
 	service.PricePairServiceInstance = pricePairService.(*service.PricePairService)
 
 	repository.TmpPrice = map[string]map[int]float64{"btcusd": {}}
 
+	//start cronjob workers
 	PriceTracker := worker.PriceTracker{
 		Mu: &mu,
 	}
