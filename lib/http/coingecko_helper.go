@@ -44,8 +44,8 @@ type MarketChartRangeResponse struct {
 }
 
 func GetBTCUSDPriceByTimestamp(timestamp int) (int, float64, error) {
-	from := strconv.Itoa(timestamp - 300)
-	to := strconv.Itoa(timestamp + 300)
+	from := strconv.Itoa(timestamp - 45000)
+	to := strconv.Itoa(timestamp + 45000)
 	payload := map[string]string{
 		"vs_currency": "usd",
 		"from":        from,
